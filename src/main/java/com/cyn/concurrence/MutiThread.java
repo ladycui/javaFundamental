@@ -4,7 +4,7 @@ package com.cyn.concurrence;
 *
 * */
 public class MutiThread {
-    private static int num = 0;
+    private static int num = 0;//try here without "static" and get what result
 
     public synchronized void printNum(String tag) {
         try {
