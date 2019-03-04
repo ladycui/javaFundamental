@@ -9,8 +9,9 @@ public class RunningThread extends Thread {
      * The Java volatile keyword is used to mark a Java variable as "being stored in main memory".
      * More precisely that means, that every read of a volatile variable will be read from the computer's main memory,
      *      and not from the CPU cache, and that every write to a volatile variable will be written to main memory, and not just to the CPU cache
+     *  volatile is not atomic, and it works well in reading operations but not well in reading-writing operations
      */
-    private boolean isRunning = true;//add "volatile" or not
+    private volatile boolean isRunning = true;//add "volatile" or not
 
     private void setRunning(boolean isRunning) {
         this.isRunning = isRunning;
